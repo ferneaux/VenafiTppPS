@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
 PowerShell module to access the features of Venafi Trust Protection Platform REST API
 
@@ -24,6 +24,8 @@ foreach ( $folder in $folders) {
 
 $publicFiles = Get-ChildItem -Path $PSScriptRoot\public\*.ps1 -Recurse -ErrorAction SilentlyContinue
 Export-ModuleMember -Function $publicFiles.Basename
+
+$Script:TppCredentialFriendlyName = ConvertFrom-Json (Get-Content "$PSScriptRoot\Config\CredentialFriendlyName.json" -Raw)
 
 $Script:TppSupportedVersion = ConvertFrom-Json (Get-Content "$PSScriptRoot\Config\SupportedVersion.json" -Raw)
 Export-ModuleMember -variable TppSupportedVersion
