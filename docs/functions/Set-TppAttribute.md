@@ -28,7 +28,7 @@ This will add to any existing value.
 
 ### EXAMPLE 2
 ```
-Set-TppAttribute -Path '\VED\Policy\My Folder\app.company.com -AttributeName 'Consumers' -Value '\VED\Policy\myappobject.company.com' -Overwrite
+Set-TppAttribute -Path '\VED\Policy\My Folder\app.company.com -AttributeName 'Consumers' -Value '\VED\Policy\myappobject.company.com'
 ```
 
 Set value on a certificate by overwriting any existing values
